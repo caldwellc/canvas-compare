@@ -2,10 +2,11 @@
 (function (outside) {
 	'use strict';
 
-	let ImageData = outside.ImageData;
+	var ImageData = outside.ImageData;
 
 	outside.canvasCompare = canvasCompare;
-	
+	outside.setImageData = setImageData;
+
 	function setImageData(imageData) {
 		ImageData = imageData;
 	}
@@ -126,7 +127,7 @@
 	}
 
 	// Diff result logic
-	
+
 	function produceDiffResult(diffImage, instance) {
 		const internals = {};
 		const externals = {};
