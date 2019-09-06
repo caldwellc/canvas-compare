@@ -2,9 +2,13 @@
 (function (outside) {
 	'use strict';
 
-	const ImageData = outside.ImageData;
+	let ImageData = outside.ImageData;
 
 	outside.canvasCompare = canvasCompare;
+	
+	function setImageData(imageData) {
+		ImageData = imageData;
+	}
 
 	function canvasCompare(params) {
 		const instance = produceInstance(params);
